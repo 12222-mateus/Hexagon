@@ -1,0 +1,118 @@
+#include<stdio.h> 
+
+#include<stdlib.h> 
+
+#include<math.h>    //bibliotecas utilizadas para a execução do programa 
+
+#include<locale.h> 
+
+ 
+ 
+
+     
+
+void calc_hexa(float L,float*area , float*perimetro){   //função do tipo float calc_hexa 
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+    *area = (3*pow(L,2)*sqrt(3))/2; //recebe a área do hexágono regular 
+
+    printf(" A área do hexágono regular é %f\n",*area); //printa a área 
+
+    *perimetro = 6*L;   // recebe o perímetro de hexágono regular 
+
+    printf(" O perímetro do hexágono regular é %f\n\n\n",*perimetro);   //printa o perímetro 
+
+ 
+ 
+
+     
+
+     
+
+     
+
+    return ; 
+
+} 
+
+int main(void){ 
+
+    float lado; //variável do tipo float iniciada 
+
+     
+
+    do{  
+
+         
+
+ 
+ 
+ 
+
+     
+
+        setlocale(LC_ALL, "Portuguese");    //Permite a utilização de acentos e letras em português 
+
+     
+
+     
+
+     
+
+        printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n"); 
+
+        printf("-=-=PROGRAMA CALCULAR HEXÁGONO-=-=-=-\n"); 
+
+        printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n"); 
+
+     
+
+         
+
+        printf("Digite o lado do hexágono regular: "); 
+
+        scanf_s("%f",&lado);    //variável lado corresponde ao lado do hexágono 
+
+        if(lado<0){ //condição para que o loop infinito seja parado 
+
+            break;  //acaba com o loop infinito 
+
+        } 
+
+         
+
+     
+
+        calc_hexa(lado,&lado,&lado);    //chama a função 
+
+         
+
+         
+
+    } 
+
+   while(lado>=0);     //condição para que o loop infinito seja realizado 
+
+ 
+ 
+
+    printf("\n-=-=-=-=-=-=-=-=-=-FIM DO PROGRAMA-=-=-=-=-=-=-=-=-=-=-=-=\n");//printa o fim do programa 
+
+     
+
+    system("pause"); 
+
+    return 0; 
+
+} 
